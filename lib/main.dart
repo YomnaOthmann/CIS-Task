@@ -1,34 +1,19 @@
+import 'package:cis_app_design/view/layout/layout.dart';
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(const CisApp());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class CisApp extends StatelessWidget {
+  const CisApp({super.key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: ThemeData(fontFamily: "Poppins"),
-      home: const MyHomePage(),
-    );
-  }
-}
-
-class MyHomePage extends StatelessWidget {
-  const MyHomePage({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text("CIS Team"),
-      ),
-      body: Center(
-        child: Image.asset("assets/images/chessendgame.webp"),
-      ),
+      debugShowCheckedModeBanner: false,
+      home: const NavigationLayout(),
     );
   }
 }
