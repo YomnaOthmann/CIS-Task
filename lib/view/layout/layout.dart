@@ -73,9 +73,9 @@ class _NavigationLayoutState extends State<NavigationLayout> {
           ),
           BottomNavigationBarItem(
             icon: Image.asset(
-              "$imagePath/article.png",
-              width: 30,
-              height: 30,
+              "$imagePath/user-profile.png",
+              width: 25,
+              height: 25,
             ),
             label: "Blogs",
           ),
@@ -167,7 +167,8 @@ class _NavigationLayoutState extends State<NavigationLayout> {
                 },
                 horizontalTitleGap: 1,
                 leading: Image.asset(
-                  "$imagePath/article_green.png",
+                  "$imagePath/user-profile.png",
+                  color: AppColors.kGreen,
                   height: 30,
                   width: 30,
                 ),
