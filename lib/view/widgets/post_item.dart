@@ -64,7 +64,7 @@ class PostItem extends StatelessWidget {
                 const SizedBox(
                   width: 3,
                 ),
-                Separator(),
+                const Separator(),
                 const SizedBox(
                   width: 3,
                 ),

@@ -6,7 +6,7 @@ import 'package:fluttertoast/fluttertoast.dart';
 import 'package:flutter/material.dart';
 
 class PostScreen extends StatefulWidget {
-  PostScreen(this.model, {super.key});
+  const PostScreen(this.model, {super.key});
   final PostModel model;
 
   @override
@@ -160,6 +160,8 @@ class _PostScreenState extends State<PostScreen> {
                             widget.model.commentsNumber++;
                             nameController.clear();
                             commentController.clear();
+                            FocusManager.instance.primaryFocus?.unfocus();
+                            showToast("Comment Sent Successfully ❤️");
                           });
                         }
                       },
@@ -181,6 +183,9 @@ class _PostScreenState extends State<PostScreen> {
                       ),
                     ),
                   ),
+                  const SizedBox(
+                    height: 20,
+                  ),
                 ],
               ),
             ),
@@ -190,9 +195,9 @@ class _PostScreenState extends State<PostScreen> {
     );
   }
 
-  void showToast() {
+  void showToast(message) {
     Fluttertoast.showToast(
-      msg: "Comment Sent Sucessfully",
+      msg: message,
       toastLength: Toast.LENGTH_LONG,
     );
   }

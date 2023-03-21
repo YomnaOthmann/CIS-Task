@@ -20,7 +20,7 @@ class _NavigationLayoutState extends State<NavigationLayout> {
   int currentIndex = 0;
   bool isSelected = false;
   List<Widget> screens = [
-    HomeScreen(),
+    const HomeScreen(),
     const EventsScreen(),
     const CommitteesScreen(),
     const BolgsScreen(),
