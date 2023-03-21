@@ -5,6 +5,13 @@ class EventsScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Center(child: Text("Events Screen"));
+    return const Center(
+        child: Text(
+      "Events Screen",
+      style: TextStyle(
+        color: Colors.white,
+        fontWeight: FontWeight.bold,
+      ),
+    ));
   }
 }

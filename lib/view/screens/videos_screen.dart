@@ -5,6 +5,13 @@ class VideosScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Center(child: Text("Videos Screen"));
+    return const Center(
+        child: Text(
+      "Videos Screen",
+      style: TextStyle(
+        color: Colors.white,
+        fontWeight: FontWeight.bold,
+      ),
+    ));
   }
 }

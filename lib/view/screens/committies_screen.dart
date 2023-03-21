@@ -5,6 +5,13 @@ class CommitteesScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Center(child: Text("Committees Screen"));
+    return const Center(
+        child: Text(
+      "Committees Screen",
+      style: TextStyle(
+        color: Colors.white,
+        fontWeight: FontWeight.bold,
+      ),
+    ));
   }
 }

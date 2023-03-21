@@ -5,6 +5,13 @@ class BolgsScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Center(child: Text("Blogs Screen"));
+    return const Center(
+        child: Text(
+      "Blogs Screen",
+      style: TextStyle(
+        color: Colors.white,
+        fontWeight: FontWeight.bold,
+      ),
+    ));
   }
 }
