@@ -65,7 +65,7 @@ class _NavigationLayoutState extends State<NavigationLayout> {
           BottomNavigationBarItem(
             icon: Image.asset(
               "$imagePath/audience.png",
-              color: Colors.white,
+              color: currentIndex == 2 ? AppColors.kGreen : Colors.white,
               width: 30,
               height: 30,
             ),
@@ -76,6 +76,7 @@ class _NavigationLayoutState extends State<NavigationLayout> {
               "$imagePath/user-profile.png",
               width: 25,
               height: 25,
+              color: currentIndex == 3 ? AppColors.kGreen : Colors.white,
             ),
             label: "Blogs",
           ),
@@ -84,7 +85,7 @@ class _NavigationLayoutState extends State<NavigationLayout> {
               "$imagePath/youtube.png",
               width: 25,
               height: 25,
-              color: Colors.white,
+              color: currentIndex == 4 ? AppColors.kGreen : Colors.white,
             ),
             label: "Videos",
           ),
