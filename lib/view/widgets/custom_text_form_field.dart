@@ -17,7 +17,7 @@ class CustomFormField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TextFormField(
-      keyboardType: TextInputType.text,
+      keyboardType: TextInputType.multiline,
       controller: controller,
       maxLength: maxLength,
       maxLines: maxLines,

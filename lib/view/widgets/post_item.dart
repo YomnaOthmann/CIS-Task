@@ -27,17 +27,20 @@ class PostItem extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
           Expanded(
-            child: Container(
-              decoration: BoxDecoration(
-                borderRadius: const BorderRadiusDirectional.only(
-                  topStart: Radius.circular(20),
-                  topEnd: Radius.circular(20),
-                ),
-                image: DecorationImage(
-                  image: AssetImage(
-                    model.image,
+            child: Hero(
+              tag: model.image,
+              child: Container(
+                decoration: BoxDecoration(
+                  borderRadius: const BorderRadiusDirectional.only(
+                    topStart: Radius.circular(20),
+                    topEnd: Radius.circular(20),
                   ),
-                  fit: BoxFit.cover,
+                  image: DecorationImage(
+                    image: AssetImage(
+                      model.image,
+                    ),
+                    fit: BoxFit.cover,
+                  ),
                 ),
               ),
             ),

@@ -9,18 +9,10 @@ class CustomAppBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AppBar(
-      systemOverlayStyle: const SystemUiOverlayStyle(
-        statusBarColor: AppColors.kGreen,
-        statusBarIconBrightness: Brightness.dark,
-      ),
-      elevation: 0,
-      backgroundColor: AppColors.kGrey,
-      foregroundColor: AppColors.kGreen,
       title: const Text(
         "CIS Team",
         style: TextStyle(fontWeight: FontWeight.bold, fontSize: 24),
       ),
-      centerTitle: true,
     );
   }
 }

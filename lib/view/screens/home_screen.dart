@@ -59,18 +59,19 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
             ),
             options: CarouselOptions(
-                height: 200,
-                onPageChanged: (index, reason) {
-                  setState(() {
-                    sliderIndex = index;
-                  });
-                },
-                autoPlay: true,
-                autoPlayInterval: const Duration(seconds: 2),
-                enlargeCenterPage: true,
-                autoPlayCurve: Curves.easeInOut,
-                initialPage: 0,
-                viewportFraction: 1),
+              height: 200,
+              onPageChanged: (index, reason) {
+                setState(() {
+                  sliderIndex = index;
+                });
+              },
+              autoPlay: true,
+              autoPlayInterval: const Duration(seconds: 2),
+              enlargeCenterPage: true,
+              autoPlayCurve: Curves.easeInOut,
+              initialPage: 0,
+              viewportFraction: 1,
+            ),
           ),
           const SizedBox(
             height: 20,
@@ -130,7 +131,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 model: posts[1],
               )),
             ],
-          )
+          ),
         ],
       ),
     );

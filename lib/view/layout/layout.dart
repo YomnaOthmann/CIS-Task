@@ -5,7 +5,6 @@ import 'package:cis_app_design/view/screens/events_screen.dart';
 import 'package:cis_app_design/view/screens/home_screen.dart';
 import 'package:cis_app_design/view/screens/videos_screen.dart';
 import 'package:flutter/material.dart';
-
 import '../widgets/custom_appbar.dart';
 
 class NavigationLayout extends StatefulWidget {
@@ -30,24 +29,13 @@ class _NavigationLayoutState extends State<NavigationLayout> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppColors.kGrey,
       appBar: const PreferredSize(
         preferredSize: Size(double.maxFinite, 70),
         child: CustomAppBar(),
       ),
       bottomNavigationBar: BottomNavigationBar(
-        unselectedItemColor: Colors.white,
         unselectedFontSize: 10,
-        unselectedLabelStyle: const TextStyle(
-          color: Colors.white,
-        ),
         selectedFontSize: 12,
-        selectedItemColor: AppColors.kGreen,
-        selectedLabelStyle: const TextStyle(
-          fontWeight: FontWeight.bold,
-          color: AppColors.kGreen,
-        ),
-        backgroundColor: AppColors.kGrey,
         currentIndex: currentIndex,
         onTap: (index) {
           onNavItemTap(index);

@@ -32,13 +32,16 @@ class _PostScreenState extends State<PostScreen> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
-                  ClipRRect(
-                    borderRadius: BorderRadius.circular(20),
-                    child: Image.asset(
-                      widget.model.image,
-                      fit: BoxFit.cover,
-                      width: double.maxFinite,
-                      height: 200,
+                  Hero(
+                    tag: widget.model.image,
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.circular(20),
+                      child: Image.asset(
+                        widget.model.image,
+                        fit: BoxFit.cover,
+                        width: double.maxFinite,
+                        height: 200,
+                      ),
                     ),
                   ),
                   const SizedBox(
