@@ -5,6 +5,8 @@ import 'package:cis_app_design/view/widgets/separator.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:flutter/material.dart';
 
+import '../widgets/custom_button.dart';
+
 class PostScreen extends StatefulWidget {
   const PostScreen(this.model, {super.key});
   final PostModel model;
@@ -155,37 +157,20 @@ class _PostScreenState extends State<PostScreen> {
                     height: 10,
                   ),
                   Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 40),
-                    child: ElevatedButton(
-                      onPressed: () {
-                        if (formKey.currentState!.validate()) {
-                          setState(() {
-                            widget.model.commentsNumber++;
-                            nameController.clear();
-                            commentController.clear();
-                            FocusManager.instance.primaryFocus?.unfocus();
-                            showToast("Comment Sent Successfully ❤️");
-                          });
-                        }
-                      },
-                      style: ElevatedButton.styleFrom(
-                        backgroundColor: AppColors.kGreen,
-                        minimumSize: const Size(double.maxFinite, 55),
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(20),
-                        ),
-                      ),
-                      child: const Text(
-                        "SEND",
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontWeight: FontWeight.bold,
-                          fontSize: 20,
-                        ),
-                        textAlign: TextAlign.start,
-                      ),
-                    ),
-                  ),
+                      padding: const EdgeInsets.symmetric(horizontal: 40),
+                      child: CustomButton(
+                        onPressed: () {
+                          if (formKey.currentState!.validate()) {
+                            setState(() {
+                              widget.model.commentsNumber++;
+                              nameController.clear();
+                              commentController.clear();
+                              FocusManager.instance.primaryFocus?.unfocus();
+                              showToast("Comment Sent Successfully ❤️");
+                            });
+                          }
+                        },
+                      )),
                   const SizedBox(
                     height: 20,
                   ),
